@@ -68,7 +68,7 @@ scene.add(particles)
 
 //Sphere / planet model
 let sphere
-gltfLoader.load('/static/Models/Planet1/scene.gltf', (gltf) => {
+gltfLoader.load('/Models/Planet1/scene.gltf', (gltf) => {
     gsap.fromTo(gltf.scene.scale, {
         x: 0, y: 0, z: 0
     }, {
