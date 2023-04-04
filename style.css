@@ -25,8 +25,96 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.header-title .facts {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  background: rgba(220, 20, 60, 0.7);
+  width: 100%;
+}
+.header-title .facts .fact1, .header-title .facts .fact2, .header-title .facts .fact3 {
+  text-align: center;
+  max-width: 260px;
+}
+.header-title .facts .fact-title {
+  font-weight: bold;
+}
 .header-title .subtitle {
   font-weight: normal;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0;
+}
+
+.icon {
+  width: 50px;
+}
+
+.divider {
+  text-align: center;
+}
+
+.cards {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: calc(100% - 3rem);
+  margin: 0 auto;
+  gap: 1rem;
+  list-style-type: none;
+}
+.cards .card {
+  max-width: 300px;
+  text-align: justify;
+  background: rgba(220, 20, 60, 0.7);
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+.cards .card:after {
+  content: "";
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+  z-index: -1;
+  background: crimson;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s all;
+}
+.cards .card:hover:after {
+  height: 75%;
+  transition: 0.2s all;
+}
+.cards .card .card-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+a, a:visited {
+  color: black;
+}
+
+.footer {
+  background: rgba(220, 20, 60, 0.7);
+  padding: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .cards {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

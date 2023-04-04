@@ -41,6 +41,7 @@ document.addEventListener('scroll', () => {
 })
 // Debug
 const gui = new GUI()
+gui.hide()
 //Scene
 const scene = new th.Scene()
 // Particles
@@ -67,7 +68,7 @@ scene.add(particles)
 
 //Sphere / planet model
 let sphere
-gltfLoader.load('/Models/Planet1/scene.gltf', (gltf) => {
+gltfLoader.load('/static/Models/Planet1/scene.gltf', (gltf) => {
     gsap.fromTo(gltf.scene.scale, {
         x: 0, y: 0, z: 0
     }, {
